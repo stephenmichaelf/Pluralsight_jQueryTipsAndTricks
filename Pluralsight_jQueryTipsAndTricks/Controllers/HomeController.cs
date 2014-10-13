@@ -35,5 +35,12 @@ namespace Pluralsight_jQueryTipsAndTricks.Controllers
 
             return View();
         }
+
+        public ActionResult CustomSelectorHiddenPanels()
+        {
+            ViewBag.Message = "Custom selector to find hidden panels.";
+
+            return View();
+        }
     }
 }

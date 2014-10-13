@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "CustomSelectorHiddenPanels";
+}
+
+<h2>CustomSelectorHiddenPanels</h2>
+
+Creating a Custom jQuery Selector
+<br />
+<br />
+<button id="showPanelsButton">Show Hidden Panels</button>
+<br />
+<br />
+<div class="panel hidden">
+    Panel 1
+</div>
+<div class="panel" style="visibility: hidden;">
+    Panel 2
+</div>
+<div class="panel" style="display: none;">
+    Panel 3
+</div>
+<div class="panel">
+    Panel 4
+</div>
+
+@section scripts {
+    <style>
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+    <script type="text/javascript">
+
+        $.extend($.expr[":"], {
+            hiddenPanel: function(thePanel) {
+                if (thePanel === null) return false;
+
+                var $thePanel = $(thePanel);
+                return $thePanel.css("display") == "none" ||
+                       $thePanel.css("visibility") == "hidden" ||
+                       $thePanel.hasClass("hidden");
+            }
+        });
+
+        $(document).ready(function () {
+            $("#showPanelsButton").click(function() {
+                $("div:hiddenPanel")
+                    .removeClass("hidden")
+                    .css({ "display": "", "visibility": "" });
+            });
+        });
+
+    </script>
+}
