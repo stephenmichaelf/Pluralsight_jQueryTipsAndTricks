@@ -28,5 +28,12 @@ namespace Pluralsight_jQueryTipsAndTricks.Controllers
 
             return View();
         }
+
+        public ActionResult WorkingWithSelectors()
+        {
+            ViewBag.Message = "Working with selectors.";
+
+            return View();
+        }
     }
 }
