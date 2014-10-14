@@ -42,5 +42,12 @@ namespace Pluralsight_jQueryTipsAndTricks.Controllers
 
             return View();
         }
+
+        public ActionResult DOMManipulationTechniques()
+        {
+            ViewBag.Message = "DOM Manipulation Techniques.";
+
+            return View();
+        }
     }
 }

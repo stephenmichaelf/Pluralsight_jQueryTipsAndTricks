@@ -303,6 +303,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\WorkingWithSelectors.cshtml" />
     <Content Include="Views\Home\CustomSelectorHiddenPanels.cshtml" />
+    <Content Include="Views\Home\DOMManipulationTechniques.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
